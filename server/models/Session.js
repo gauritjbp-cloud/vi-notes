@@ -17,5 +17,5 @@ const sessionSchema = new mongoose.Schema({
 
 }, { timestamps: true });
 
-// 🔥 IMPORTANT FIX what this does
+
 module.exports = mongoose.model("Session", sessionSchema);

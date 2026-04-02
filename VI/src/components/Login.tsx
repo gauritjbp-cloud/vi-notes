@@ -17,11 +17,11 @@ function Login({ setToken, setUsername }: LoginProps) {
     const endpoint = isRegister ? "register" : "login";
 //decide api
     try {
-      const res = await fetch(`http://localhost:5000/api/${endpoint}`, { //sends request
+      const res = await fetch(`http://localhost:5000/api/${endpoint}`, { //sends request using post
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: usernameInput, password: passwordInput }),
-      });
+      });    
 
       const data = await res.json();
 

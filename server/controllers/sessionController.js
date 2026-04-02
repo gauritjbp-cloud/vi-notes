@@ -3,14 +3,14 @@ const Session = require("../models/Session");
 const stringSimilarity = require("string-similarity");
 const Passage = require("../models/Passage"); // create a collection with reference passages
 
-// ✅ SAVE DATA in MONGODB
+// SAVE DATA in MONGODB
 const saveSession = async (req, res) => {
   try {
     console.log("🔥 BODY:", req.body);
 
     const { sessionId, events, text } = req.body;
 //receive data from frontend here
-
+//creates session below
     const newSession = new Session({
       sessionId,
       events,
